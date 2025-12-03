@@ -29,7 +29,9 @@ const registerUser = (event) => {
 
     const newUser = {
         username: username,
-        password: password
+        password: password,
+        petName: null,
+        petBreed: null
     };
 
     users.push(newUser);
@@ -51,10 +53,15 @@ const loginUser = (event) => {
     const users = getUserData();
 
     const userFound = users.find(user => user.username === username && user.password === password);
+    const hasPet = userFound && userFound.petName && userFound.petBreed;
 
     if (userFound) {
         alert('Login successful! Welcome back, ' + username + '!');
-        // Redirect to homepage or dashboard
+        if (hasPet) {
+            window.location.href = 'dashboard.html';
+        } else {
+            window.location.href = 'create-pet.html';
+        }
     } else {
         messageElement.textContent = 'Invalid username or password. Please try again.';
     }
