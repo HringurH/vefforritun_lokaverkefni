@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login-register.css">
+    <link rel="stylesheet" href="css/create-pet.css">
     <script src="js/auth.js" defer></script>
     <title>Feline Good | Create Pet</title>
 </head>
@@ -19,7 +19,47 @@
             <div id="main-content">
                 <h2>Create your pet</h2>
                 <p id="message"></p>
-                
+                <form id="creation-form">
+                    <label for="pet-name">Pet Name</label>
+                    <input type="text" id="pet-name" name="pet-name" required>
+                    
+                    <label>Choose Your Cat Breed</label>
+                    <div class="breed-grid">
+                        <label class="breed-option">
+                            <input type="radio" name="breed" value="bengal-cat" required>
+                            <div class="breed-card">
+                                <img src="media/bengal-cat.png" alt="Bengal cat">
+                                <span class="breed-name">Bengal</span>
+                            </div>
+                        </label>
+                        
+                        <label class="breed-option">
+                            <input type="radio" name="breed" value="maine-coon" required>
+                            <div class="breed-card">
+                                <img src="media/maine-coon.png" alt="Maine Coon cat">
+                                <span class="breed-name">Maine Coon</span>
+                            </div>
+                        </label>
+                        
+                        <label class="breed-option">
+                            <input type="radio" name="breed" value="tabby-cat" required>
+                            <div class="breed-card">
+                                <img src="media/tabby-cat.png" alt="Tabby cat">
+                                <span class="breed-name">Tabby</span>
+                            </div>
+                        </label>
+                        
+                        <label class="breed-option">
+                            <input type="radio" name="breed" value="turkish-angora" required>
+                            <div class="breed-card">
+                                <img src="media/turkish-angora.png" alt="Turkish Angora cat">
+                                <span class="breed-name">Turkish Angora</span>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <button type="submit">Create Pet</button>
+                </form>
             </div>
             <div class="banner banner-right">
                 <img src="media/cat-left.png" alt="An image of a cat looking to the left with a wide open mouth.">

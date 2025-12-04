@@ -59,8 +59,10 @@ const loginUser = (event) => {
         alert('Login successful! Welcome back, ' + username + '!');
         if (hasPet) {
             window.location.href = 'dashboard.html';
+            return;
         } else {
             window.location.href = 'create-pet.html';
+            return;
         }
     } else {
         messageElement.textContent = 'Invalid username or password. Please try again.';
