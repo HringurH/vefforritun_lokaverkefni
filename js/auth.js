@@ -57,6 +57,8 @@ const loginUser = (event) => {
 
     if (userFound) {
         alert('Login successful! Welcome back, ' + username + '!');
+        const currentUserJSON = JSON.stringify(userFound);
+        localStorage.setItem('currentUser', currentUserJSON);
         if (hasPet) {
             window.location.href = 'dashboard.html';
             return;
