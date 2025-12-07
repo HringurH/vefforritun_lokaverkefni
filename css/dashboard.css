@@ -1,0 +1,112 @@
+/* Pet Stats */
+#pet-stats {
+	width: 100%;
+	max-width: 500px;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.stat-bar {
+	width: 100%;
+}
+
+.stat-label {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 0.5rem;
+	font-size: 0.95rem;
+	font-weight: 600;
+	color: #374151; /* gray-700 */
+}
+
+.stat-track {
+	width: 100%;
+	height: 28px;
+	background: #e5e7eb; /* gray-200 */
+	border-radius: 999px;
+	overflow: hidden;
+	box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+	border: 2px solid #d1d5db; /* gray-300 */
+}
+
+.stat-fill {
+	height: 100%;
+	background: linear-gradient(135deg, #10b981, #34d399); /* green gradient */
+	border-radius: 999px;
+	transition: width 400ms ease-out, background 300ms ease-out;
+	box-shadow: 0 0 8px rgba(16, 185, 129, 0.4);
+}
+
+/* Different colors for different stats */
+#happiness-fill {
+	background: linear-gradient(135deg, #f59e0b, #fbbf24); /* amber gradient */
+	box-shadow: 0 0 8px rgba(245, 158, 11, 0.4);
+}
+
+#hunger-fill {
+	background: linear-gradient(135deg, #10b981, #34d399); /* green gradient */
+	box-shadow: 0 0 8px rgba(16, 185, 129, 0.4);
+}
+
+#energy-fill {
+	background: linear-gradient(135deg, #3b82f6, #60a5fa); /* blue gradient */
+	box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+}
+
+/* Low stat warning colors */
+.stat-fill.low {
+	background: linear-gradient(135deg, #ef4444, #f87171) !important; /* red gradient */
+	box-shadow: 0 0 8px rgba(239, 68, 68, 0.4) !important;
+}
+
+/* Action Buttons */
+#action-buttons {
+	display: flex;
+	gap: 0.75rem;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 1rem;
+}
+
+.action-btn {
+	background: linear-gradient(135deg, #f97316, #fb923c);
+	color: #111827;
+	border: none;
+	border-radius: 999px;
+	padding: 0.85rem 1.6rem;
+	font-weight: 600;
+	font-size: 0.95rem;
+	cursor: pointer;
+	transition: transform 150ms ease-out, box-shadow 150ms ease-out;
+	box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15);
+	position: relative;
+}
+
+.action-btn::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border-radius: inherit;
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	pointer-events: none;
+}
+
+.action-btn:hover {
+	transform: translateY(-2px) scale(1.03);
+	box-shadow: 0 14px 35px rgba(15, 23, 42, 0.25);
+}
+
+.action-btn:active {
+	transform: translateY(0px) scale(0.98);
+	box-shadow: 0 6px 15px rgba(15, 23, 42, 0.15);
+}
+
+.action-btn:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+	transform: none !important;
+}

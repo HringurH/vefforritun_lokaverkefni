@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login-register.css">
-    <script src="js/auth.js" defer></script>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="js/dashboard.js" defer></script>
     <title>Feline Good | Dashboard</title>
 </head>
 <body>
@@ -17,9 +19,49 @@
                 <img src="media/cat-right.png" alt="An image of a cat looking to the right with a wide open mouth.">
             </div>
             <div id="main-content">
-                <h2>Welcome to Your Dashboard</h2>
-                <p id="welcome-message"></p>
-                <button id="logout-btn">Logout</button>
+                <h2 id="pet-name">#</h2>
+                <img id="bengal-cat" class="hidden" src="media/bengal-cat.png" alt="Your pet cat">
+                <img id="maine-coon" class="hidden" src="media/maine-coon.png" alt="Your pet cat">
+                <img id="tabby-cat" class="hidden" src="media/tabby-cat.png" alt="Your pet cat">
+                <img id="turkish-angora" class="hidden" src="media/turkish-angora.png" alt="Your pet cat">
+                
+                <div id="pet-stats">
+                    <div class="stat-bar">
+                        <div class="stat-label">
+                            <span>Happiness</span>
+                            <span id="happiness-value">100</span>
+                        </div>
+                        <div class="stat-track">
+                            <div id="happiness-fill" class="stat-fill" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-bar">
+                        <div class="stat-label">
+                            <span>Hunger</span>
+                            <span id="hunger-value">100</span>
+                        </div>
+                        <div class="stat-track">
+                            <div id="hunger-fill" class="stat-fill" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-bar">
+                        <div class="stat-label">
+                            <span>Energy</span>
+                            <span id="energy-value">100</span>
+                        </div>
+                        <div class="stat-track">
+                            <div id="energy-fill" class="stat-fill" style="width: 100%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="action-buttons">
+                    <button id="play-btn" class="action-btn">Play</button>
+                    <button id="feed-btn" class="action-btn">Feed</button>
+                    <button id="sleep-btn" class="action-btn">Sleep</button>
+                </div>
             </div>
             <div class="banner banner-right">
                 <img src="media/cat-left.png" alt="An image of a cat looking to the left with a wide open mouth.">
